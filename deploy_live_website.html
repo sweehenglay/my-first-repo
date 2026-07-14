@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Deploy a live website</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="deploy-a-live-website">Deploy a live website</h1>
+<p>Here is your step-by-step guide to making <code>my-first-repo</code> live:</p>
+<h3 id="1-enable-github-pages-in-your-repository">1. Enable GitHub Pages in Your Repository</h3>
+<ol>
+<li>
+<p>Open your browser and go to your repository.</p>
+</li>
+<li>
+<p>Look at the menu bar right below your repository name and click on the <strong>Settings</strong> icon (the gear icon on the far right).</p>
+</li>
+<li>
+<p>On the left-hand sidebar, scroll down to the <strong>Code and automation</strong> section and click on <strong>Pages</strong>.</p>
+</li>
+</ol>
+<hr>
+<h3 id="2-configure-the-build-and-deployment-source">2. Configure the Build and Deployment Source</h3>
+<ol>
+<li>
+<p>Under the <strong>Build and deployment</strong> section, look for <strong>Source</strong>. Ensure it is set to <strong>Deploy from a branch</strong> (this is usually the default).</p>
+</li>
+<li>
+<p>Under <strong>Branch</strong>, click the dropdown menu that currently says <code>None</code> and select <strong><code>main</code></strong>.</p>
+</li>
+<li>
+<p>Leave the folder dropdown right next to it set to <strong><code>/ (root)</code></strong> (since your <code>index.html</code> is in the main folder).</p>
+</li>
+<li>
+<p>Click the <strong>Save</strong> button.</p>
+</li>
+</ol>
+<hr>
+<h3 id="3-see-your-live-website">3. See Your Live Website!</h3>
+<ul>
+<li>GitHub will now take about 1 to 2 minutes to build and deploy your site.</li>
+<li>Refresh the page after a minute. At the top of that same <strong>Pages</strong> settings screen, you will see a live link boxed in a green background that says: <em>&quot;Your site is live at...&quot;</em></li>
+</ul>
+<blockquote>
+<p>💡 <strong>Quick Tip:</strong> If you ever make changes to your file in VS Code and push them to GitHub using the workflows you learned in the last session, your live website will automatically update itself a minute later!</p>
+</blockquote>
+<p><em>This page was written in <strong>Markdown</strong> and rendered by GitHub Pages!</em></p>
+
+            
+            
+        </body>
+        </html>
